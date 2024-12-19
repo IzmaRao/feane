@@ -28,7 +28,7 @@ const DetailPage: React.FC<Params> = ({ params }) => {
       try {
         const unwrappedParams = await params;
         const response = await fetch(
-          `http://localhost:3000/api/products/${unwrappedParams.id}`,
+          `https://feane-eight.vercel.app/api/products/${unwrappedParams.id}`,
           { cache: 'no-store' }
         );
         if (!response.ok) {
