@@ -20,7 +20,7 @@ function Menu() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/products/`);
+        const response = await fetch(`https://feane-eight.vercel.app/api/products/`);
         if(!response.ok) {
           throw new Error("Failed to fetch product data");
         }
