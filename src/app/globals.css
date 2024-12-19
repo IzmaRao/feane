@@ -1,21 +1,2885 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  font-family: "Open Sans", serif;
+  list-style-type: none;
+  text-decoration: none;
+
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Apply the custom font variables */
+:root {
+  --font-fraunces: "Fraunces", serif;
+  --font-dancing-script: "Dancing Script", cursive;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-fraunces);
 }
+
+.loading{
+  font-size: 30px;
+  margin: 10px 120px;
+}
+
+
+
+.checkout-cart{
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  border-radius: 9999px;
+  border: transparent;
+  background-color: #FFBE33;
+  justify-content: center;
+  margin-left: 10;
+  font-size: 15px;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  body{
+      margin: 0px -0px -8px -8px;
+  }
+  /* navbar start */
+  .navbar{
+      display: grid; 
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      width: auto;
+      height: 58px;
+      margin: 10px 15px 10px 5px;
+      z-index: 1;
+      position: relative;
+  }
+  .navbar-head {
+      position: relative;
+      margin: 0px 0px 0px 20px;
+      font-size: 32px;
+      font-family: 'Dancing Script', cursive;
+  }
+  .h{        
+      font-family: 'Dancing Script', cursive;
+  }
+  .navbar-list{
+      display: none;
+  }
+  .list-link{
+      text-decoration: none;
+      color: #fff;
+  }
+  .navbar-icons{
+      display: none;
+  }
+  .navbar-icons-two{
+      padding: 0px 0px 0px 35px;
+      gap: 20px;
+      display: black;
+      align-items: center;
+      justify-content: center;
+  } 
+  .navbar-icon-two{
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: left;
+      margin-bottom: 5px;
+  }    
+  .navbar-btn{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 162px;
+      height: 45px;
+      color: #fff;
+      font-size: 16px;
+      border: transparent;
+  }
+  .navbar-toggle{
+      display: block;
+      position: relative;
+  }
+  .navbar-list-two{
+      margin-top: 300px;
+      margin-left: 140px;
+      height: 250px;
+      display: block;
+      justify-items: left;
+      width: 220px;
+      position: absolute;
+      line-height: 30px;
+      background-color: black;
+      border-radius: 5px;
+      z-index: 200;
+  }
+  .cart{
+      position:absolute;
+      z-index: 120;
+      min-height: 667px;
+      max-height: fit-content;
+      width: 240px;
+      margin-left: -37px;
+      color: white;
+      margin-top: 205px;
+      background-color: #404949;
+  }
+  .cart-cross{
+      position: relative;
+  }
+  .cart-head{
+      display: flex;
+      margin-left: 20px;
+      margin-right: 10px;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-head-h{
+      font-size: 30px;
+      font-weight: 500;
+  }
+  .cart-item-img{
+      place-content: center;
+      background: #fff;
+      padding-top: 5px;
+      align-items: center;
+      border-radius: 5px;
+      height: 50px;
+  }
+  .cart-products{
+      margin-left: -30px;
+      margin-right: 10px;
+  }
+  .cart-item-paras{
+      height: 80px;
+  }
+  .cart-item{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
+  .cart-item-content{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+  }
+  .cart-item-content-quantity{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: -15px;
+  }
+
+  /* navbar end */
+
+  /* home start */
+  .bg{
+      z-index: -10;
+  }
+  .hero-section{
+      color: #fff;
+      padding: 20px 30px 20px 25px;
+      z-index: 0;
+  }
+  .hero-section h1{
+      font-size: 56px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+      width: 314px;
+  }
+  .hero-section p{
+      font-size: 14px;
+      width: 314px;
+      height: 126px;
+      margin-bottom: 20px;
+      line-height: 21px;
+  }
+  .hero-btn button{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 172px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+  }
+  /* home end */
+
+  /* offer start */
+  .offers{
+      margin: 480px 10px 0px 20px;
+      display: grid;
+      gap: 45px;
+  }
+  .offer{
+      margin-top: 10px;
+      padding: 20px 5px 0px 5px;
+      margin: auto auto;
+      display: block;
+      gap: 10px;
+      justify-items: center;  
+      width: 295px;
+      height: 350px;
+      background-color: #222831;
+      border-radius: 5px;
+      align-items: center;
+      text-align: center;
+  }
+  .offimg{
+      border-radius: 9999px;
+      border: 5px solid #FFBE33;
+      height: 165px;
+      width: 165px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  .offer-img:hover {
+      transform: scale(1.1);
+  }
+  .offer-img{
+      border-radius: 9999px;
+      transition: transform .2s;
+  }
+  .offer-content{
+      color: #fff;
+      gap: 0px;
+  }
+  .offer-content-h{
+      margin: 10px;
+      font-size: 24px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p{
+      margin: 10px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p-sub{
+      font-size: 16px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-btn{
+      margin: 10px;
+      display: flex;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+      gap: 5px;
+  }
+  /* offer end */
+
+  /* menu start */
+  .menu{
+      margin: 0px 0px 120px 0px;
+      background-color: #fff;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+  }
+  .menu-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      text-align: center;
+  }
+  .menu-head{
+      padding-top: 50px;
+  }
+  .menu-list{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 40px;
+      margin-top: 40px;
+      margin-left: -60px;
+  }
+  .menu-items{
+      display: block;
+      margin: 80px auto 0px auto;
+      justify-items: center;
+      justify-content: center;
+      gap: 30px;
+  }
+  .item{
+      background-color: #222831;
+      width: 316px;
+      height: 443px;
+      border-radius: 30px 30px 20px 20px;
+      color: #fff;
+  }
+  .item-img-div{
+      width: 316px;
+      height: 215px;   
+      background-color: #F1F2F3;  
+      border-radius: 20px 20px 0px 50px;
+      justify-items: center;
+      padding: 50px auto;
+  }
+  .items-img{
+      width: auto;
+      height: 144px;  
+      margin: 30px auto;
+      transition: .2s;
+  }
+  .items-img:hover{
+      transform: scale(1.1);
+  }
+  .item-texts{
+      height: 205px;   
+      padding: 20px 0px;
+      width: 264px;
+  }
+  .item-name{
+      font-size: 20px;
+      margin: 4px 0px;
+      font-weight: 550;
+  }
+  .item-description{
+      font-size: 15px;
+  }
+  .item-cart{
+      border-radius: 9999px;
+      width: 40px;
+      height: 40px;
+      justify-items: center;
+      background-color: #FFBE33;
+  }
+  .item-buy{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-icon{
+      padding: 7px;
+  }
+
+  
+  /* deatil item design */
+  .detailitem{
+      background-image: linear-gradient(to right, #0C0E10,#0C0E10, #0D1716 , #272E30, #384143);
+      place-items: center;
+      margin-top: 15px;
+      display: block;
+      gap: 10px;
+      padding: 60px 20px 130px 20px;
+      height: fit-content;
+      color: white;
+  }
+  .detailitem-img-div{
+      display: flex;
+      padding: 0px;
+      place-content: center;
+  }
+  .detailitem-img{
+      position: relative;
+      padding-top: 20px;
+      padding-left: 90px;
+      height: 240px;
+      width: 260px;
+  }
+  .detailitem-circle{
+      position: absolute;
+      background: #FFBE33;
+      height: 220px;
+      width: 220px;
+      border-radius: 9999px;
+      margin-right: 60px;
+  }
+  
+  .detailitem-circle-t{
+      margin-top: 150px;
+      margin-left: 70px;
+      position: absolute;
+      background: #222831;
+      height: 170px;
+      width: 170px;
+      border-radius: 9999px;
+  }
+  .detailitem-texts{
+      width: 290px;
+      margin: 100px 0px 0px 0px;
+  }
+  .detailitem-name{
+      margin: 20px 0px;
+      font-family: "Dancing Script", cursive;
+      font-size: 38px;
+  }
+  .detailitem-description{
+      margin: 20px 0px;
+      font-size: 15px;
+      line-height: 30px;
+  }
+  .detailitem-buy{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 0px;
+  }
+  .detailitem-price{
+      font-size: 15px;
+  }
+  .detailitem-cart{
+      color: white;
+      font-weight: 400;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      width: 145px;
+      height: 45px;
+      border-radius: 9999px;
+      border: transparent;
+      background-color: #FFBE33;
+      justify-content: center;
+  }
+
+  /* menu end */
+
+  /* about start */
+  .about{
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column-reverse;
+      grid-template-columns: auto auto;
+      gap: 0px;
+      background-color: #222831;
+      margin: 0px ;
+      padding: 0px 0px 0px 10px;
+      height: 1014px;
+  }
+  .about-imgg{
+      height: 428px;
+      width: 314px;
+      margin-top: 100px;
+  }
+  .about-content{
+      width: 317px;
+      height: 300px;
+      color: #fff;
+  }
+  .about-h{
+      margin: 0px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .about-btn{
+      margin: 15px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  /* about end */
+
+  /* booking start */
+  .booking{
+      background-color: #fff;
+      display: block;
+      justify-content: center;
+      padding: 0px 25px;
+      gap: 20px;
+  }
+  .booking-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+      margin-top: 90px;
+  }
+  .input-box{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .booking-form{
+      width: 314px;
+  }
+  .input-one, .input-two, .input-three, .input-five {
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .input-four{
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .booking-btn{
+      text-transform: uppercase;
+      margin: 40px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 198px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  .map{
+      border-radius: 10px;
+      height: 345px;
+      width: 314px;
+  }
+  .map-div{
+      margin: 0px;
+  }
+  /* booking end */
+
+
+  /* footer start */
+  .footer{
+      height: auto;
+      width: auto;
+      background-color: #222831;
+      color: #fff;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 0px 0px 40px 0px;
+      margin-top: 50px;
+  }
+  .section-one{
+      display: block;
+      padding: 60px 30px;
+      gap: 60px;
+  }
+  .footer-contact{
+      color: #fff;
+      text-align: center;
+      justify-items: center;
+      line-height: 4px;
+      margin-bottom: 50px;
+  }
+  .contact-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .contact-p{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+  }
+  .footer-intro{
+      margin-top: -20px;
+      text-align: center;
+  }
+  .intro-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .intro-p{
+      margin-top: -10px;
+      width: 314px;
+      height: fit-content;
+      color: #DBDBDB;
+      line-height: 25px;
+  }
+  .intro-icons{
+      gap: 8px;
+  }
+  .icon-one, .icon-two, .icon-three, .icon-four, .icon-five{
+      background-color: #fff;
+      padding: 6px;
+      margin: 0px 2px;
+      border-radius: 9999px;
+  }
+  .footer-timing{
+      margin-top: 16px;
+      text-align: center;
+  }
+  .time-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .time-p{
+      font-size: 16px;
+      color: #DBDBDB;
+  }
+  /* footer end */
+}
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body{
+      margin: 0px -0px -8px -8px;
+  }
+  /* navbar start */
+  .navbar{
+      display: grid; 
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      width: auto;
+      height: 58px;
+      margin: 10px 5px 10px 5px;
+      z-index: 1;
+      position: relative;
+  }
+  .navbar-head {
+      position: relative;
+      margin: 0px 0px 0px 20px;
+      font-size: 32px;
+      font-family: 'Dancing Script', cursive;
+  }
+  .h{        
+      font-family: 'Dancing Script', cursive;
+  }
+  .navbar-list{
+      display: none;
+  }
+  .list-link{
+      text-decoration: none;
+      color: #fff;
+  }
+  .navbar-icons{
+      display: none;
+  }
+  .navbar-icons-two{
+      padding: 0px 0px 0px 35px;
+      gap: 20px;
+      display: black;
+      align-items: center;
+      justify-content: center;
+  } 
+  .navbar-icon-two{
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: left;
+      margin-bottom: 5px;
+  }    
+  .navbar-btn{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 162px;
+      height: 45px;
+      color: #fff;
+      font-size: 16px;
+      border: transparent;
+  }
+  .navbar-toggle{
+      display: block;
+      position: relative;
+  }
+  .navbar-list-two{
+      margin-top: 300px;
+      margin-left: 249px;
+      height: 250px;
+      display: block;
+      justify-items: left;
+      width: 220px;
+      position: absolute;
+      line-height: 30px;
+      background-color: black;
+      border-radius: 5px;
+  }
+  .cart{
+      position:absolute;
+      z-index: 120;
+      min-height: 538px;
+      max-height: fit-content;
+      width: 240px;
+      margin-left: -40px;
+      color: white;
+      margin-top: 73px;
+      background-color: #404949;
+  }
+  .cart-cross{
+      position: relative;
+  }
+  .cart-head{
+      display: flex;
+      margin-left: 20px;
+      margin-right: 10px;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-head-h{
+      font-size: 30px;
+      font-weight: 500;
+  }
+  .cart-item-img{
+      background: #fff;
+      padding-top: 3px;
+      align-items: center;
+      border-radius: 5px;
+      height: 50px;
+      width: 60px;
+  }
+  .cart-products{
+      margin-left: -30px;
+      margin-right: 10px;
+  }
+  .cart-item-paras{
+      height: 90px;
+  }
+  .cart-item{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  .cart-item-content{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+  }
+  .cart-item-content-quantity{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: -14px;
+  }
+
+  /* navbar end */
+
+  /* home start */
+  .bg{
+      z-index: -10;
+  }
+  .hero-section{
+      color: #fff;
+      padding: 20px 30px 20px 25px;
+  }
+  .hero-section h1{
+      font-size: 56px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+      width: 438px;
+  }
+  .hero-section p{
+      font-size: 14px;
+      width: 440px;
+      height: 84px;
+      margin-bottom: 20px;
+      line-height: 21px;
+  }
+  .hero-btn button{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 172px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+  }
+  /* home end */
+
+  /* offer start */
+  .offers{
+      margin: 230px 10px 0px 20px;
+      display: grid;
+      grid-template-columns: auto;
+      gap: 45px;
+  }
+  .offer{
+      padding: 15px 15px;
+      margin: auto auto;
+      display: flex;
+      gap: 10px;
+      justify-items: center;  
+      width: 415px;
+      height: 190px;
+      background-color: #222831;
+      border-radius: 5px;
+      align-items: center;
+      text-align: left;
+  }
+  .offimg{
+      border-radius: 9999px;
+      border: 5px solid #FFBE33;
+      height: 165px;
+      width: 165px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  .offer-img:hover {
+      transform: scale(1.1);
+  }
+  .offer-img{
+      border-radius: 9999px;
+      transition: transform .2s;
+  }
+  .offer-content{
+      color: #fff;
+      gap: 0px;
+  }
+  .offer-content-h{
+      margin: 10px;
+      font-size: 24px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p{
+      margin: 10px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p-sub{
+      font-size: 16px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-btn{
+      margin: 10px;
+      display: flex;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+      gap: 5px;
+  }
+  /* offer end */
+
+  /* menu start */
+  .menu{
+      margin: 0px 0px 120px 0px;
+      background-color: #fff;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+  }
+  .menu-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      text-align: center;
+  }
+  .menu-head{
+      padding-top: 50px;
+  }
+  .menu-list{
+      display: flex;
+      gap: 50px;
+      margin-top: 40px;
+  }
+  .menu-items{
+      display: grid;
+      grid-template-columns: auto;
+      margin: 80px auto 0px auto;
+      justify-items: center;
+      justify-content: center;
+      gap: 30px;
+  }
+  .item{
+      background-color: #222831;
+      width: 451px;
+      height: 420px;
+      border-radius: 30px 30px 20px 20px;
+      color: #fff;
+  }
+  .item-img-div{
+      width: 451px;
+      height: 215px;   
+      background-color: #F1F2F3;  
+      border-radius: 20px 20px 0px 50px;
+      justify-items: center;
+      padding: 50px auto;
+  }
+  .items-img{
+      width: auto;
+      height: 144px;  
+      margin: 30px auto;
+      transition: transform .2s;
+  }
+  .items-img:hover{
+      transform: scale(1.1);
+  }
+  .item-texts{
+      height: 205px;   
+      padding: 20px 0px;
+      width: 401px;
+  }
+  .item-name{
+      font-size: 20px;
+      margin: 4px 0px;
+      font-weight: 550;
+  }
+  .item-description{
+      width: 401px;
+      font-size: 15px;
+  }
+  .item-cart{
+      border-radius: 9999px;
+      width: 40px;
+      height: 40px;
+      justify-items: center;
+      background-color: #FFBE33;
+  }
+  .item-buy{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-icon{
+      padding: 7px;
+  }
+
+  
+  /* deatil item design */
+  .detailitem{
+      background-image: linear-gradient(to right, #0C0E10,#0C0E10, #0D1716 , #272E30, #384143);
+      place-items: center;
+      margin-top: 15px;
+      display: block;
+      gap: 10px;
+      padding: 0px 20px 130px 20px;
+      height: fit-content;
+      color: white;
+  }
+  .detailitem-img-div{
+      display: flex;
+      padding: 0px;
+      place-content: center;
+  }
+  .detailitem-img{
+      position: relative;
+      padding-top: 30px;
+      padding-left: 120px;
+      height: 280px;
+      width: 300px;
+  }
+  .detailitem-circle{
+      position: absolute;
+      background: #FFBE33;
+      height: 280px;
+      width: 280px;
+      border-radius: 9999px;
+      margin-right: 120px;
+  }
+  
+  .detailitem-circle-t{
+      margin-top: 180px;
+      margin-left: 40px;
+      position: absolute;
+      background: #222831;
+      height: 220px;
+      width: 220px;
+      border-radius: 9999px;
+  }
+  .detailitem-texts{
+      width: 290px;
+      margin: 150px 0px 0px 0px;
+  }
+  .detailitem-name{
+      margin: 20px 0px;
+      font-family: "Dancing Script", cursive;
+      font-size: 38px;
+  }
+  .detailitem-description{
+      margin: 20px 0px;
+      font-size: 15px;
+      line-height: 30px;
+  }
+  .detailitem-buy{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 0px;
+  }
+  .detailitem-price{
+      font-size: 15px;
+  }
+  .detailitem-cart{
+      color: white;
+      font-weight: 400;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      width: 145px;
+      height: 45px;
+      border-radius: 9999px;
+      border: transparent;
+      background-color: #FFBE33;
+      justify-content: center;
+  }
+
+  /* menu end */
+
+  /* about start */
+  .about{
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column-reverse;
+      grid-template-columns: auto auto;
+      gap: 0px;
+      background-color: #222831;
+      margin: 0px ;
+      padding: 0px 0px 0px 10px;
+      height: 1114px;
+  }
+  .about-imgg{
+      height: 607px;
+      width: 445px;
+      margin-top: 40px;
+  }
+  .about-content{
+      width: 451px;
+      height: 300px;
+      color: #fff;
+  }
+  .about-h{
+      margin: 0px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .about-btn{
+      margin: 15px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  /* about end */
+
+  /* booking start */
+  .booking{
+      background-color: #fff;
+      display: block;
+      justify-content: center;
+      padding: 0px 25px;
+      gap: 20px;
+  }
+  .booking-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+      margin-top: 90px;
+  }
+  .input-box{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .booking-form{
+      width: 451px;
+  }
+  .input-one, .input-two, .input-three, .input-five {
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .input-four{
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .booking-btn{
+      text-transform: uppercase;
+      margin: 40px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 198px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  .map{
+      border-radius: 10px;
+      height: 345px;
+      width: 451px;
+  }
+  .map-div{
+      margin: 0px;
+  }
+  /* booking end */
+
+
+  /* footer start */
+  .footer{
+      height: auto;
+      width: auto;
+      background-color: #222831;
+      color: #fff;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 0px 0px 40px 0px;
+      margin-top: 50px;
+  }
+  .section-one{
+      display: block;
+      padding: 60px 30px;
+      gap: 60px;
+  }
+  .footer-contact{
+      color: #fff;
+      text-align: center;
+      justify-items: center;
+      line-height: 4px;
+      margin-bottom: 50px;
+  }
+  .contact-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .contact-p{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+  }
+  .footer-intro{
+      margin-top: -20px;
+      text-align: center;
+  }
+  .intro-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .intro-p{
+      margin-top: -10px;
+      width: 459px;
+      height: fit-content;
+      color: #DBDBDB;
+      line-height: 25px;
+  }
+  .intro-icons{
+      gap: 8px;
+  }
+  .icon-one, .icon-two, .icon-three, .icon-four, .icon-five{
+      background-color: #fff;
+      padding: 6px;
+      margin: 0px 2px;
+      border-radius: 9999px;
+  }
+  .footer-timing{
+      margin-top: 16px;
+      text-align: center;
+  }
+  .time-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .time-p{
+      font-size: 16px;
+      color: #DBDBDB;
+  }
+  /* footer end */
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body{
+      margin: 0px -0px -8px -8px;
+  }
+  /* navbar start */
+  .navbar{
+      display: grid; 
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      width: auto;
+      height: 58px;
+      margin: 10px 30px 10px 30px;
+      z-index: 1;
+      position: relative;
+  }
+  .navbar-head {
+      position: relative;
+      margin: 0px 0px 0px 20px;
+      font-size: 32px;
+      font-family: 'Dancing Script', cursive;
+  }
+  .h{        
+      font-family: 'Dancing Script', cursive;
+  }
+  .navbar-list{
+      display: none;
+  }
+  .list-link{
+      text-decoration: none;
+      color: #fff;
+  }
+  .navbar-icons{
+      display: none;
+  }
+  .navbar-icons-two{
+      padding: 0px 0px 0px 35px;
+      gap: 20px;
+      display: black;
+      align-items: center;
+      justify-content: center;
+  } 
+  .navbar-icon-two{
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: left;
+      margin-bottom: 5px;
+  }    
+  .navbar-btn{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 162px;
+      height: 45px;
+      color: #fff;
+      font-size: 16px;
+      border: transparent;
+  }
+  .navbar-toggle{
+      display: block;
+      position: relative;
+  }
+  .navbar-list-two{
+      margin-top: 300px;
+      margin-left: 499px;
+      height: 250px;
+      display: block;
+      justify-items: left;
+      width: 220px;
+      position: absolute;
+      line-height: 30px;
+      background-color: black;
+      border-radius: 5px;
+  }
+  .cart{
+      position:absolute;
+      z-index: 120;
+      min-height: 538px;
+      max-height: fit-content;
+      width: 250px;
+      margin-left: -40px;
+      color: white;
+      margin-top: 73px;
+      background-color: #404949;
+      justify-self: right;
+  }
+  .cart-cross{
+      position: relative;
+  }
+  .cart-head{
+      display: flex;
+      margin-left: 20px;
+      margin-right: 10px;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-head-h{
+      font-size: 30px;
+      font-weight: 500;
+  }
+  .cart-item-img{
+      background: #fff;
+      padding-top: 3px;
+      align-items: center;
+      border-radius: 5px;
+      height: 50px;
+      width: 60px;
+  }
+  .cart-products{
+      margin-left: -30px;
+      margin-right: 10px;
+  }
+  .cart-item-paras{
+      height: 90px;
+  }
+  .cart-item{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  .cart-item-content{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+  }
+  .cart-item-content-quantity{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: -14px;
+  }
+
+  /* navbar end */
+
+  /* home start */
+  .bg{
+      z-index: -10;
+  }
+  .hero-section{
+      color: #fff;
+      padding: 20px 130px 20px 50px;
+  }
+  .hero-section h1{
+      font-size: 56px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+      width: 400px;
+  }
+  .hero-section p{
+      font-size: 14px;
+      width: 400px;
+      height: 84px;
+      margin-bottom: 20px;
+  }
+  .hero-btn button{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 172px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+  }
+  /* home end */
+
+  /* offer start */
+  .offers{
+      margin: 170px auto 0px auto;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 30px;
+      justify-content: center;  
+  }
+  .offer{
+      padding: 15px 15px;
+      margin: auto auto;
+      display: block;
+      gap: 10px;
+      justify-items: center;  
+      width: 300px;
+      height: 335px;
+      background-color: #222831;
+      border-radius: 5px;
+      align-items: center;
+      text-align: center;
+  }
+  .offimg{
+      border-radius: 9999px;
+      border: 5px solid #FFBE33;
+      height: 165px;
+      width: 165px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  .offer-img:hover {
+      transform: scale(1.1);
+  }
+  .offer-img{
+      border-radius: 9999px;
+      transition: transform .2s;
+  }
+  .offer-content{
+      color: #fff;
+      gap: 0px;
+  }
+  .offer-content-h{
+      margin: 10px;
+      font-size: 24px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p{
+      margin: 10px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p-sub{
+      font-size: 16px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-btn{
+      margin: 10px;
+      display: flex;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+      gap: 5px;
+  }
+  /* offer end */
+
+  /* menu start */
+  .menu{
+      margin: 10px 0px 120px 0px;
+      background-color: #fff;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+  }
+  .menu-h{
+      margin: 0px 0px 0px 0px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      text-align: center;
+  }
+  .menu-head{
+      padding-top: 100px;
+  }
+  .menu-list{
+      display: flex;
+      gap: 50px;
+      margin-top: 40px;
+  }
+  .menu-items{
+      display: grid;
+      grid-template-columns: auto auto;
+      margin: 80px auto 0px auto;
+      justify-items: center;
+      justify-content: center;
+      gap: 30px;
+  }
+  .item{
+      background-color: #222831;
+      width: 332px;
+      height: 433px;
+      border-radius: 30px 30px 20px 20px;
+      color: #fff;
+  }
+  .item-img-div{
+      width: 332px;
+      height: 215px;   
+      background-color: #F1F2F3;  
+      border-radius: 20px 20px 0px 50px;
+      justify-items: center;
+      padding: 50px auto;
+  }
+  .items-img{
+      margin: 30px auto;
+      transition: transform .2s;
+  }
+  .items-img:hover{
+      transform: scale(1.1);
+  }
+  .item-texts{
+      padding: 30px 25px;
+      text-align: start;
+  }
+  .item-name{
+      font-size: 20px;
+      margin: 4px auto;
+      font-weight: 550;
+  }
+  .item-description{
+      width: 280px;
+      font-size: 15px;
+  }
+  .item-cart{
+      border-radius: 9999px;
+      width: 40px;
+      height: 40px;
+      justify-items: center;
+      background-color: #FFBE33;
+  }
+  .item-buy{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-icon{
+      padding: 7px;
+  }
+
+  
+  /* deatil item design */
+  .detailitem{
+      background-image: linear-gradient(to right, #0C0E10,#0C0E10, #0D1716 , #272E30, #384143);
+      place-items: center;
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      padding: 0px 20px 130px 20px;
+      height: 450px;
+      color: white;
+  }
+  .detailitem-img-div{
+      display: flex;
+      padding: 0px;
+      place-content: center;
+  }
+  .detailitem-img{
+      position: relative;
+      padding-top: 30px;
+      padding-left: 120px;
+      height: 280px;
+      width: 300px;
+  }
+  .detailitem-circle{
+      position: absolute;
+      background: #FFBE33;
+      height: 280px;
+      width: 280px;
+      border-radius: 9999px;
+      margin-right: 120px;
+  }
+  
+  .detailitem-circle-t{
+      margin-top: 180px;
+      margin-left: 40px;
+      position: absolute;
+      background: #222831;
+      height: 220px;
+      width: 220px;
+      border-radius: 9999px;
+  }
+  .detailitem-texts{
+      width: 290px;
+      margin: 60px 0px 0px 0px;
+  }
+  .detailitem-name{
+      margin: 20px 0px;
+      font-family: "Dancing Script", cursive;
+      font-size: 38px;
+  }
+  .detailitem-description{
+      margin: 20px 0px;
+      font-size: 15px;
+      line-height: 30px;
+  }
+  .detailitem-buy{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 0px;
+  }
+  .detailitem-price{
+      font-size: 15px;
+  }
+  .detailitem-cart{
+      color: white;
+      font-weight: 400;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      width: 145px;
+      height: 45px;
+      border-radius: 9999px;
+      border: transparent;
+      background-color: #FFBE33;
+      justify-content: center;
+  }
+
+  /* menu end */
+
+  /* about start */
+  .about{
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 30px;
+      background-color: #222831;
+      margin: 0px auto;
+      padding: 60px 0px;
+      height: 530px;
+  }
+  .about-imgg{
+      height: 450px;
+      width: 330;
+  }
+  .about-content{
+      width: 330px;
+      height: 258px;
+      color: #fff;
+  }
+  .about-h{
+      margin: 0px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .about-btn{
+      margin: 15px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  /* about end */
+
+  /* booking start */
+  .booking{
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      padding: 0px 30px;
+      gap: 20px;
+  }
+  .booking-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+      margin-top: 80px;
+  }
+  .input-box{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .booking-form{
+      width: 330px;
+  }
+  .input-one, .input-two, .input-three, .input-five {
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .input-four{
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .booking-btn{
+      text-transform: uppercase;
+      margin: 40px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 198px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  .map{
+      border-radius: 10px;
+      height: 330px;
+      width: 330px;
+  }
+  .map-div{
+      margin: 150px 0px;
+  }
+  /* booking end */
+
+
+  /* footer start */
+  .footer{
+      height: 440px;
+      width: auto;
+      background-color: #222831;
+      color: #fff;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 10px 0px 40px 0px;
+  }
+  .section-one{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      padding: 60px 30px;
+      gap: 60px;
+  }
+  .footer-contact{
+      color: #fff;
+      text-align: center;
+      justify-items: center;
+      line-height: 4px;
+  }
+  .contact-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .contact-p{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+  }
+  .footer-intro{
+      margin-top: -20px;
+      text-align: center;
+  }
+  .intro-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .intro-p{
+      margin-top: -10px;
+      width: 209px;
+      height: fit-content;
+      color: #DBDBDB;
+      line-height: 25px;
+  }
+  .intro-icons{
+      gap: 8px;
+  }
+  .icon-one, .icon-two, .icon-three, .icon-four, .icon-five{
+      background-color: #fff;
+      padding: 6px;
+      margin: 0px 2px;
+      border-radius: 9999px;
+  }
+  .footer-timing{
+      margin-top: -6px;
+      text-align: center;
+  }
+  .time-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .time-p{
+      font-size: 16px;
+      color: #DBDBDB;
+  }
+  /* footer end */
+}
+
+
+
+@media (min-width: 1025px) and (max-width: 1440px) { 
+  body{
+      margin: 0px -0px -8px -8px;
+  }
+  /* navbar start */
+  .navbar{
+      display: grid; 
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      width: auto;
+      height: 58px;
+      margin: 10px 70px 10px 60px;
+      z-index: 1;
+      position: relative;
+  }
+  .navbar-head {
+      margin: 0px 20px 0px 0px;
+      font-size: 32px;
+      font-family: 'Dancing Script', cursive;
+  }
+  .h{        
+      font-family: 'Dancing Script', cursive;
+  }
+  .navbar-list{
+      display: flex;
+      text-transform: uppercase;
+      font-size: 15.50px;
+      gap: 30px;
+  }
+  .list-link{
+      text-decoration: none;
+      color: #fff;
+  }
+  .navbar-icons{
+      gap: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .navbar-btn{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 158px;
+      height: 42px;
+      color: #fff;
+      font-size: 15px;
+      border: transparent;
+  }
+  .navbar-toggle{
+      display: none;
+  }
+  .cart{
+      position:absolute;
+      z-index: 1;
+      min-height: 655px;
+      max-height: fit-content;
+      width: 300px;
+      margin-left: 100px;
+      color: white;
+      margin-top: 580px;
+      background-color: #404949;
+  }
+  .cart-cross{
+      position: relative;
+  }
+  .cart-head{
+      display: flex;
+      margin-left: 20px;
+      margin-right: 10px;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-head-h{
+      font-size: 30px;
+      font-weight: 500;
+  }
+  .cart-item-img{
+      background: #fff;
+      padding: 5px;
+      align-items: center;
+      border-radius: 5px;
+  }
+  .cart-products{
+      margin-left: -20px;
+      margin-right: 0px;
+  }
+  .cart-item-paras{
+      height: 90px;
+  }
+  .cart-item{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
+  .cart-item-content{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
+  .cart-item-content-quantity{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  }
+
+  /* navbar end */
+
+  /* home start */
+  .bg{
+      z-index: -10;
+  }
+  .hero-section{
+      color: #fff;
+      padding: 20px 140px 20px 60px;
+  }
+  .hero-section h1{
+      font-size: 56px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+  }
+  .hero-section p{
+      font-size: 14.50px;
+      width: 450px;
+      height: 84px;
+      margin-bottom: 20px;
+  }
+  .hero-btn button{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 172px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+  }
+  /* home end */
+
+  /* offer start */
+  .offers{
+      margin: 300px auto 0px auto;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 30px;
+      justify-content: center;  
+  }
+  .offer{
+      padding: 15px 15px;
+      margin: auto auto;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      justify-content: start;  
+      width: 420px;
+      height: 185px;
+      background-color: #222831;
+      border-radius: 5px;
+      align-items: center;
+  }
+  .offimg{
+      border-radius: 9999px;
+      border: 5px solid #FFBE33;
+      height: 165px;
+      width: 165px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  .offer-img:hover {
+      transform: scale(1.1);
+  }
+  .offer-img{
+      border-radius: 9999px;
+      transition: transform .2s;
+  }
+  .offer-content{
+      color: #fff;
+      gap: 0px;
+  }
+  .offer-content-h{
+      margin: 10px;
+      font-size: 24px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p{
+      margin: 10px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p-sub{
+      font-size: 16px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-btn{
+      margin: 10px;
+      display: flex;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+      gap: 5px;
+  }
+  /* offer end */
+
+  /* menu start */
+  .menu{
+      margin: 10px auto 120px auto;
+      background-color: #fff;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+  }
+  .menu-h{
+      margin: 0px auto 0px auto;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      text-align: center;
+  }
+  .menu-head{
+      padding-top: 100px;
+  }
+  .menu-list{
+      display: flex;
+      gap: 50px;
+      margin-top: 40px;
+  }
+  .menu-items{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: 80px auto 0px auto;
+      justify-items: center;
+      justify-content: center;
+      gap: 30px;
+  }
+  .item{
+      background-color: #222831;
+      width: 289.98px;
+      height: 443px;
+      border-radius: 30px 30px 20px 20px;
+      color: #fff;
+  }
+  .item-img-div{
+      width: 289.98px;
+      height: 215px;   
+      background-color: #F1F2F3;  
+      border-radius: 20px 20px 0px 50px;
+      justify-items: center;
+      padding: 50px auto;
+  }
+  .items-img{
+      margin: 30px auto;
+      transition: transform .2s;
+  }
+  .items-img:hover{
+      transform: scale(1.1);
+  }
+  .item-texts{
+      padding: 30px 25px;
+      text-align: start;
+  }
+  .item-name{
+      font-size: 20px;
+      margin: 4px auto;
+      font-weight: 550;
+  }
+  .item-description{
+      font-size: 15px;
+  }
+  .item-cart{
+      border-radius: 9999px;
+      width: 40px;
+      height: 40px;
+      justify-items: center;
+      background-color: #FFBE33;
+  }
+  .item-buy{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-icon{
+      padding: 7px;
+  }
+
+  
+  /* deatil item design */
+  .detailitem{
+      background-image: linear-gradient(to right, #0C0E10,#0C0E10, #0D1716 , #272E30, #384143);
+      place-items: center;
+      margin-top: 15px;
+      display: flex;
+      gap: 30px;
+      padding: 0px 70px 130px 20px;
+      height: 450px;
+      color: white;
+  }
+  .detailitem-img-div{
+      display: flex;
+      padding: 0px;
+      place-content: center;
+  }
+  .detailitem-img{
+      position: relative;
+      padding-top: 30px;
+      padding-left: 120px;
+  }
+  .detailitem-circle{
+      position: absolute;
+      background: #FFBE33;
+      height: 350px;
+      width: 350px;
+      border-radius: 9999px;
+      margin-right: 120px;
+  }
+  
+  .detailitem-circle-t{
+      margin-top: 150px;
+      margin-left: 40px;
+      position: absolute;
+      background: #222831;
+      height: 290px;
+      width: 290px;
+      border-radius: 9999px;
+  }
+  .detailitem-texts{
+      width: 500px;
+      margin: 60px 0px 0px 0px;
+  }
+  .detailitem-name{
+      margin: 20px 0px;
+      font-family: "Dancing Script", cursive;
+      font-size: 48px;
+  }
+  .detailitem-description{
+      margin: 20px 0px;
+      font-size: 16px;
+      line-height: 35px;
+  }
+  .detailitem-buy{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 20px 0px;
+  }
+  .detailitem-price{
+      font-size: 17px;
+  }
+  .detailitem-cart{
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      width: 160px;
+      height: 48px;
+      border-radius: 9999px;
+      border: transparent;
+      background-color: #FFBE33;
+      justify-content: center;
+  }
+
+  /* menu end */
+
+  /* about start */
+  .about{
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 30px;
+      background-color: #222831;
+      margin: 0px auto;
+      padding: 100px 0px;
+  }
+  .about-content{
+      width: 449px;
+      height: 258px;
+      color: #fff;
+  }
+  .about-h{
+      margin: 0px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .about-btn{
+      margin: 15px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  /* about end */
+
+  /* booking start */
+  .booking{
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      padding: 0px 40px;
+      gap: 20px;
+  }
+  .booking-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+      margin-top: 80px;
+  }
+  .input-box{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .booking-form{
+      width: 450px;
+  }
+  .input-one, .input-two, .input-three, .input-five {
+      
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .input-four{
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .booking-btn{
+      text-transform: uppercase;
+      margin: 40px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 198px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  .map{
+      border-radius: 5px;
+      height: 330px;
+      width: 430px;
+  }
+  .map-div{
+      margin: 150px 0px;
+  }
+  /* booking end */
+
+
+  /* footer start */
+  .footer{
+      height:415px;
+      width: auto;
+      background-color: #222831;
+      color: #fff;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 0px 0px 40px 0px;
+  }
+  .section-one{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      padding: 60px 40px;
+      gap: 110px;
+  }
+  .footer-contact{
+      color: #fff;
+      text-align: center;
+      justify-items: center;
+      line-height: 4px;
+  }
+  .contact-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .contact-p{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+  }
+  .footer-intro{
+      margin-top: -20px;
+      text-align: center;
+  }
+  .intro-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .intro-p{
+      margin-top: -10px;
+      width: 270px;
+      height: fit-content;
+      color: #DBDBDB;
+      line-height: 25px;
+  }
+  .intro-icons{
+      gap: 8px;
+  }
+  .icon-one, .icon-two, .icon-three, .icon-four, .icon-five{
+      background-color: #fff;
+      padding: 6px;
+      margin: 0px 2px;
+      border-radius: 9999px;
+  }
+  .footer-timing{
+      text-align: center;
+  }
+  .time-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .time-p{
+      font-size: 16px;
+      color: #DBDBDB;
+  }
+  /* footer end */
+
+}
+
+
+
+@media (min-width: 1441px) { 
+  body{
+      margin: 0px -8px -8px -8px;
+  }
+  /* navbar start */
+  .navbar{
+      display: grid; 
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      width: auto;
+      height: 58px;
+      margin: 10px 120px 10px 110px;
+      z-index: 1;
+      position: relative;
+  }
+  .navbar-head {
+      margin: 0px 150px 0px 0px;
+      font-size: 32px;
+      font-family: 'Dancing Script', cursive;
+  }
+  .h{        
+      font-family: 'Dancing Script', cursive;
+  }
+  .navbar-list{
+      display: flex;
+      text-transform: uppercase;
+      font-size: 16px;
+      gap: 40px;
+  }
+  .list-link{
+      text-decoration: none;
+      color: #fff;
+  }
+  .navbar-icons{
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .navbar-btn{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 162px;
+      height: 45px;
+      color: #fff;
+      font-size: 16px;
+  }
+  .navbar-toggle{
+      display: none;
+  }
+  .cart{
+      position:absolute;
+      z-index: 1;
+      min-height: 600px;
+      max-height: fit-content;
+      width: 410px;
+      margin-left: 90px;
+      color: white;
+      margin-top: 520px;
+      background-color: #404949;
+  }
+  .cart-cross{
+      position: relative;
+  }
+  .cart-head{
+      display: flex;
+      margin-left: 40px;
+      margin-right: 20px;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-head-h{
+      font-size: 30px;
+      font-weight: 500;
+  }
+  .cart-item-img{
+      background: #fff;
+      padding: 5px;
+      align-items: center;
+      border-radius: 5px;
+  }
+  .cart-item-paras{
+      height: 90px;
+  }
+  .cart-item{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+  }
+  .cart-item-content{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+  .cart-item-content-quantity{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  /* navbar end */
+
+  /* home start */
+  .bg{
+      z-index: -10;
+  }
+  .hero-section{
+      color: #fff;
+      padding: 20px 140px 20px 100px;
+  }
+  .hero-section h1{
+      font-size: 56px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 0px;
+  }
+  .hero-section p{
+      font-size: 14.50px;
+      width: 566px;
+      height: 63px;
+      margin-bottom: 20px;
+  }
+  .hero-btn button{
+      background-color: #FFBE33;
+      padding: 8px 30px;
+      border-radius: 9999px;
+      width: 162px;
+      height: 45px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+  }
+  /* home end */
+
+  /* offer start */
+  .offers{
+      margin: 310px 0px 100px 0px;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 30px;
+      justify-content: center;  
+  }
+  .offer{
+      padding: 15px 15px;
+      margin: auto auto;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      justify-content: start;  
+      width: 520px;
+      height: 185px;
+      background-color: #222831;
+      border-radius: 5px;
+      align-items: center;
+  }
+  .offimg{
+      border-radius: 9999px;
+      border: 5px solid #FFBE33;
+      height: 165px;
+      width: 165px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  .offer-img:hover {
+      transform: scale(1.1);
+  }
+  .offer-img{
+      border-radius: 9999px;
+      transition: transform .2s;
+  }
+  .offer-content{
+      color: #fff;
+      gap: 0px;
+  }
+  .offer-content-h{
+      margin: 10px;
+      font-size: 24px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p{
+      margin: 10px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-content-p-sub{
+      font-size: 16px;
+      font-family: "Dancing Script", cursive;
+  }
+  .offer-btn{
+      margin: 10px;
+      display: flex;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+      gap: 5px;
+  }
+  /* offer end */
+
+  /* menu start */
+  .menu{
+      margin: 10px auto 120px auto;
+      background-color: #fff;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+  }
+  .menu-h{
+      margin: 0px auto 0px auto;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      text-align: center;
+  }
+  .menu-head{
+      padding-top: 100px;
+  }
+  .menu-list{
+      display: flex;
+      gap: 50px;
+      margin-top: 40px;
+  }
+  .menu-items{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: 80px auto 0px auto;
+      justify-items: center;
+      justify-content: center;
+      gap: 30px;
+  }
+  .item{
+      background-color: #222831;
+      width: 362px;
+      height: 410px;
+      border-radius: 30px 30px 20px 20px;
+      color: #fff;
+  }
+  .item-img-div{
+      width: 362px;
+      height: 215px;   
+      background-color: #F1F2F3;  
+      border-radius: 20px 20px 0px 50px;
+      justify-items: center;
+      padding: 50px auto;
+  }
+  .items-img{
+      margin: 30px auto;
+      transition: transform .2s;
+  }
+  .items-img:hover{
+      transform: scale(1.1);
+  }
+  .item-texts{
+      padding: 20px 30px;
+      text-align: start;
+  }
+  .item-name{
+      font-size: 20px;
+      margin: 4px auto;
+      font-weight: 550;
+  }
+  .item-description{
+      font-size: 15px;
+  }
+  .item-cart{
+      border-radius: 9999px;
+      width: 40px;
+      height: 40px;
+      justify-items: center;
+      background-color: #FFBE33;
+  }
+  .item-buy{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cart-icon{
+      padding: 7px;
+  }
+
+  
+  /* deatil item design */
+  .detailitem{
+      background-image: linear-gradient(to right, #0C0E10,#0C0E10, #0D1716 , #272E30, #384143);
+      place-items: center;
+      margin-top: 15px;
+      display: flex;
+      gap: 30px;
+      padding: 0px 60px 130px 50px;
+      height: 450px;
+      color: white;
+  }
+  .detailitem-img-div{
+      display: flex;
+      padding: 30px;
+      place-content: center;
+  }
+  .detailitem-img{
+      position: relative;
+      padding-top: 30px;
+      padding-left: 120px;
+  }
+  .detailitem-circle{
+      position: absolute;
+      background: #FFBE33;
+      height: 380px;
+      width: 380px;
+      border-radius: 999px;
+      margin-right: 100px;
+  }
+  
+  .detailitem-circle-t{
+      margin-top: 150px;
+      margin-left: 0px;
+      position: absolute;
+      background: #222831;
+      height: 300px;
+      width: 300px;
+      border-radius: 999px;
+  }
+  .detailitem-texts{
+      width: 500px;
+      margin: 60px 0px 0px 0px;
+  }
+  .detailitem-name{
+      margin: 20px 0px;
+      font-family: "Dancing Script", cursive;
+      font-size: 48px;
+  }
+  .detailitem-description{
+      margin: 20px 0px;
+      font-size: 16px;
+      line-height: 35px;
+  }
+  .detailitem-buy{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 20px 0px;
+  }
+  .detailitem-price{
+      font-size: 17px;
+  }
+  .detailitem-cart{
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      width: 160px;
+      height: 48px;
+      border-radius: 9999px;
+      border: transparent;
+      background-color: #FFBE33;
+      justify-content: center;
+  }
+
+  /* menu end */
+
+  /* about start */
+  .about{
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 80px;
+      background-color: #222831;
+      margin: 0px auto;
+      padding: 100px 0px;
+  }
+  .about-content{
+      width: 555px;
+      height: 258px;
+      color: #fff;
+  }
+  .about-h{
+      margin: 0px;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .about-btn{
+      margin: 15px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  /* about end */
+
+  /* booking start */
+  .booking{
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      padding: 40px auto;
+      gap: 30px;
+  }
+  .booking-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .input-box{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .input-one, .input-two, .input-three, .input-five {
+      width: 555px;
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .input-four{
+      width: 598px;
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px 20px;
+      font-size: 15px;
+      color: black;
+  }
+  .booking-btn{
+      text-transform: uppercase;
+      margin: 40px 0px;
+      background-color: #FFBE33;
+      padding: 0px 30px;
+      border-radius: 9999px;
+      width: 171px;
+      height: 44px;
+      color: #fff;
+      font-size: 16px;
+      border: 0px transparent;
+      align-items: center;
+  }
+  .map{
+      border-radius: 5px;
+  }
+  .map-div{
+      margin: 150px 0px;
+  }
+  /* booking end */
+
+
+  /* footer start */
+  .footer{
+      height: 370px;
+      width: auto;
+      background-color: #222831;
+      color: #fff;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 0px 0px 40px 0px;
+  }
+  .section-one{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      padding: 60px 40px;
+      gap: 150px;
+  }
+  .footer-contact{
+      color: #fff;
+      text-align: center;
+      justify-items: center;
+      line-height: 8px;
+  }
+  .contact-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .contact-p{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+  }
+  .footer-intro{
+      text-align: center;
+  }
+  .intro-h{
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+  }
+  .intro-p{
+      width: 360px;
+      height: 72px;
+      color: #DBDBDB;
+      line-height: 25px;
+  }
+  .intro-icons{
+      gap: 8px;
+  }
+  .icon-one, .icon-two, .icon-three, .icon-four, .icon-five{
+      background-color: #fff;
+      padding: 6px;
+      margin: 0px 2px;
+      border-radius: 9999px;
+  }
+  .footer-timing{
+      text-align: center;
+  }
+  .time-h{
+      font-size: 28px;
+      font-family: "Dancing Script", cursive;
+  }
+  .time-p{
+      font-size: 16px;
+      color: #DBDBDB;
+  }
+  /* footer end */
+
+}
+
+
