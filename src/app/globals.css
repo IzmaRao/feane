@@ -56,7 +56,7 @@ body {
       width: auto;
       height: 58px;
       margin: 10px 15px 10px 5px;
-      z-index: 1;
+      z-index: 2;
       position: relative;
   }
   .navbar-head {
@@ -644,7 +644,7 @@ body {
       width: auto;
       height: 58px;
       margin: 10px 5px 10px 5px;
-      z-index: 1;
+      z-index: 2;
       position: relative;
   }
   .navbar-head {
@@ -1229,7 +1229,7 @@ body {
       width: auto;
       height: 58px;
       margin: 10px 30px 10px 30px;
-      z-index: 1;
+      z-index: 2;
       position: relative;
   }
   .navbar-head {
@@ -1813,7 +1813,7 @@ body {
       width: auto;
       height: 58px;
       margin: 10px 70px 10px 60px;
-      z-index: 1;
+      z-index: 2;
       position: relative;
   }
   .navbar-head {
@@ -2362,7 +2362,7 @@ body {
       width: auto;
       height: 58px;
       margin: 10px 120px 10px 110px;
-      z-index: 1;
+      z-index: 2;
       position: relative;
   }
   .navbar-head {
