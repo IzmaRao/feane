@@ -1,4 +1,4 @@
-## Feane Fast Food Restaurant
+# Feane Fast Food Restaurant
 Feane is a fast food restaurant website developed as part of Milestone 3 project assigned by Sir Ameen Alam. This project was created on [Date: Insert today's date here].
 
 # Overview
