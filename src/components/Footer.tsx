@@ -49,7 +49,7 @@ function Footer() {
       </div>
 
       <div>
-        <p>© 2024 All Rights Reserved By Free Html Templates</p>
+      <p>© 2024 All Rights Reserved by Izma</p>
       </div>
     </footer>
   )
